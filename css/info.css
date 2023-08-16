@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+
+body{
+    display: grid;
+    margin: 0;
+    grid-template-areas: 
+    'header header'
+    'main main'
+    'footer footer';
+    height: 100vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% auto 10%;
+    font-family: 'Quicksand', cursive;
+}
+
+.header{
+    position: relative;
+    grid-area: header;
+    background-color: #130b04;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 3vh;
+    font-size-adjust: auto;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.b{
+    position: absolute;
+    top: 65%;
+    z-index: 2;
+}
+
+.main{
+    grid-area: main;
+    position: relative;
+    background-color: antiquewhite;
+    width: 100%;
+}
+
+.grid-info{
+    position: relative;;
+    display: grid;
+    grid-template-areas:
+    'foto nome'
+    'foto sabor'
+    'foto velocidade'
+    'foto efcol'
+    'foto preco'
+    'foto button';
+    grid-template-columns: 50% 50%;
+    grid-template-rows:  30% auto auto auto auto auto;
+    top: 50px;
+    width: 80%;
+    left: 10%;
+    font-size: 1.3vw;
+}
+
+.slideshow{
+    grid-area: foto;
+    width: 50%;
+    height: 50vh;
+}
+
+.slideshow img{
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+}
+
+img{
+
+    height: 100%;
+}
+
+.nome{
+    grid-area: nome;
+    position: relative;
+    width: 62%;
+    left: 38%;
+    font-size: 2vw;
+    top: 50px;
+}
+
+.sabor{
+    grid-area: sabor;
+}
+
+.velocidade{
+    grid-area: velocidade;
+}
+
+.efcol{
+    grid-area: efcol;
+}
+
+.preco{
+    grid-area: preco;
+}
+
+.button{
+    grid-area: button;
+}
+
+.button input{
+    background-color: #130b04;
+    color: aliceblue;
+    height: 5vh;
+    width: 12%;
+    border-radius: 10px;
+    position: relative;
+    left: 38%;
+}
+
+.button input:hover{
+    background-color: #351c0a;
+}
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+    }
+    16.5%{
+        opacity: 1;
+    }
+    33%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    66%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.slideshow img:nth-child(1){
+    animation: slide 15s infinite;
+}
+
+.slideshow img:nth-child(2){
+    animation: slide 15s infinite 10s;
+}
+
+.slideshow img:nth-child(3){
+    animation: slide 15s infinite 5s;
+}
+
+.footer{
+    display: flex;
+    grid-area: footer;
+    position: relative;
+    background-color: #130b04;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    text-align: center;
+}

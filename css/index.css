@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'nav main'
+    'footer footer';
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 15% auto 10%;
+    font-family: 'Quicksand', cursive;
+}
+
+.header{
+    position: relative;
+    grid-area: header;
+    background-color: #130b04;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 2.5vh;
+    font-size-adjust: auto;
+    border: 1px solid black;
+}
+
+.titulo{
+    position: absolute;
+    top: 65%;
+    z-index: 2;
+}
+
+.logo{
+    position: absolute;
+    width: 3%;
+    top: 15%;
+    z-index: 1;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.nav{
+    grid-area: nav;
+    background-color: #130b04;
+    border-right: 3px solid black;
+}
+
+.nav form{
+    height: 100vh;
+    position: relative;
+    display: block;
+    top: 5vh;
+    color: aliceblue;
+}
+
+.nav legend{
+    font-size: 2vw;
+}
+
+.nav fieldset{
+    position: relative;
+    height: 60vh;
+    display: block;
+    border: transparent;
+}
+
+.nav form select{
+    border-radius: 10px;
+    width: 100%;
+    height: 4vh;
+}
+
+.filtro{
+    padding-bottom: 8%;
+}
+
+.main{
+    grid-area: main;
+    position: relative;
+    background-color: antiquewhite;
+    width: 100%;
+}
+
+.grid_geral{
+    position: relative;
+    display: grid;
+    grid-template-columns: 32.5% 32.5% 32.5%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    gap: 1%;
+    max-height:90vh;
+    overflow: auto;
+    top: 2vh;
+}
+
+.grid_choco{
+    position: relative;
+    display: grid;
+    height: 30vh;
+    grid-template-areas: 
+    'nome nome'
+    'foto sabor'
+    'foto preco'
+    'foto info';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    border-bottom: 1px solid black;
+}
+
+.nome, .foto, .sabor, .preco, .info{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 2.3vh;
+    font-size-adjust: auto;
+}
+
+.nome{
+    grid-area: nome;
+    border: 1px solid black;
+    background-color: #130b04;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 1.8vw;
+    font-size-adjust: auto;
+}
+
+.foto{
+    grid-area: foto;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sabor{
+    grid-area: sabor;
+}
+
+.preco{
+    grid-area: preco;
+}
+
+.info{
+    grid-area: info;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: black;
+}
